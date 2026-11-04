@@ -3,6 +3,7 @@ import { ManageBlog } from "./ManageBlog";
 import { Search } from "./Search";
 import SelectAdminCountries from "./Countries";
 import { Pagination } from "./Pagination";
+import { Suspense } from "react";
 
 export type blogType = {
   id: number;
@@ -35,7 +36,9 @@ export async function Blogs({
   return (
     <div className="blogs">
       <Search />
-      <SelectAdminCountries pcountry={country ? country : ""} />
+      <Suspense>
+        <SelectAdminCountries pcountry={country ? country : ""} />
+      </Suspense>
       <h2>{country}</h2>
       {res.blogs && (
         <>
