@@ -3,6 +3,7 @@ import { Blog } from "./Blog";
 import { Search } from "./Search";
 import { Pagination } from "./Pagination";
 import SelectCountries from "../components/Nav";
+import { RetryButton } from "../components/Retry";
 
 export type blogType = {
   id: number;
@@ -47,7 +48,12 @@ export async function Blogs({
         </>
       )}
 
-      {res.error && <p className="error">{res.error}</p>}
+      {res.error && (
+        <div className="error">
+          <p>{res.error}</p>
+          <RetryButton />
+        </div>
+      )}
 
       <Pagination />
     </div>

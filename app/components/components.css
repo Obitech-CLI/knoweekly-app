@@ -3,7 +3,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: white;
+  background-color: #381932;
   z-index: 5;
 }
 
@@ -16,6 +16,7 @@ footer {
 
 header > span {
   font-size: 1.3rem;
+  color: white;
 }
 
 .feedback-modal {
