@@ -54,6 +54,7 @@ main {
 button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   border-radius: 20px;
 }
@@ -159,11 +160,13 @@ form.create > label {
 }
 
 button[type="submit"] {
-  height: 55px;
+  height: 60px;
   width: 100%;
   text-transform: capitalize;
   margin: 1rem auto 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 textarea {
