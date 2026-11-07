@@ -4,6 +4,7 @@ import { Search } from "./Search";
 import SelectAdminCountries from "./Countries";
 import { Pagination } from "./Pagination";
 import { Suspense } from "react";
+import { RetryButton } from "@/app/components/Retry";
 
 export type blogType = {
   id: number;
@@ -52,7 +53,12 @@ export async function Blogs({
         </>
       )}
 
-      {res.error && <p className="error">{res.error}</p>}
+      {res.error && (
+        <div className="error">
+          <p>{res.error}</p>
+          <RetryButton />
+        </div>
+      )}
 
       <Pagination />
     </div>
