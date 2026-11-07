@@ -4,7 +4,7 @@ header {
   top: 0;
   background-color: white;
   z-index: 5;
-  padding: 1.5rem 0.8rem;
+  padding: 1rem 0.8rem;
 }
 
 footer {
@@ -15,7 +15,7 @@ footer {
 }
 
 header > span {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #00539c;
   font-weight: bolder;
   text-transform: capitalize;
