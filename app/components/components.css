@@ -1,10 +1,10 @@
 header {
-  padding: 1rem;
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #381932;
+  background-color: white;
   z-index: 5;
+  padding: 1.5rem 0.8rem;
 }
 
 footer {
@@ -16,7 +16,11 @@ footer {
 
 header > span {
   font-size: 1.3rem;
-  color: white;
+  color: #00539c;
+  font-weight: bolder;
+  box-shadow: 0px 0px 3px black;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
 
 .feedback-modal {
@@ -70,7 +74,7 @@ header > span {
   background-color: transparent;
   width: fit-content;
   height: fit-content;
-  border-radius: 3px 10px 10px 3px;
+  border-radius: 3px 20px 20px 3px;
   color: black;
 }
 
