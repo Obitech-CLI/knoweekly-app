@@ -5,8 +5,23 @@
   font-family: sans-serif;
 }
 
+:root {
+  --bg: white;
+  --bg-txt: black;
+  --shadow: 0px 0px 3px black;
+  --border: 1.5px solid black;
+}
+
+[data-theme="dark"] {
+  --bg: black;
+  --bg-txt: white;
+  --shadow: 0px 0px 3px white;
+  --border: 1.5px solid white;
+}
+
 body {
-  background-color: white;
+  background-color: var(--bg);
+  color: var(--bg-txt);
 }
 
 a {
@@ -63,11 +78,12 @@ button {
   text-transform: capitalize;
   text-align: center;
   padding: 6rem 0;
-  border-radius: 5px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  box-shadow: var(--shadow);
 }
 
 .countries > button.active {
@@ -86,7 +102,7 @@ fieldset {
   gap: 0.5rem;
   border: none;
   border-radius: 20px;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: var(--shadow);
 }
 
 fieldset button {
@@ -174,7 +190,7 @@ textarea {
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
-  border: 1.5px solid black;
+  border: var(--border);
   border-radius: 10px;
   background-color: transparent;
 }
@@ -183,7 +199,7 @@ input {
   padding: 1rem;
   font-size: 1rem;
   border-radius: 20px;
-  border: 1.5px solid black;
+  border: var(--border);
   width: 100%;
   background-color: transparent;
 }
@@ -193,9 +209,10 @@ form.auth > label {
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  box-shadow: 0px 0px 2px black;
+  box-shadow: var(--shadow);
   padding: 0 0 0 1rem;
   border-radius: 20px;
+  color: var(--bg-txt);
 }
 
 form.delete {
@@ -206,7 +223,7 @@ form.delete {
 
 label.select > button {
   background-color: transparent;
-  border: 1.5px solid black;
+  border: var(--border);
   width: 100%;
   display: flex;
   align-items: center;
@@ -215,7 +232,7 @@ label.select > button {
   font-size: 1rem;
   text-transform: capitalize;
   border-radius: 10px;
-  color: black;
+  color: var(--bg-txt);
 }
 
 label.select > div {
@@ -228,6 +245,7 @@ label.select > div {
   padding: 1rem;
   gap: 1rem;
   margin-top: 3.5rem;
+  color: var(--bg-txt);
 }
 
 label.select > div ul {
@@ -239,7 +257,7 @@ label.select > div ul {
 }
 
 label.select > div ul li {
-  border: 1.5px solid black;
+  border: var(--border);
   padding: 1rem;
   border-radius: 30px;
   text-align: center;

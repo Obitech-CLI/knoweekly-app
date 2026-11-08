@@ -4,13 +4,18 @@ import { supabase } from "@/app/lib/supabase/supabase";
 
 export const CreateBlog = async (prevData: any, formData: FormData) => {
   const country = (formData.get("country") as string).trim().toLowerCase();
-  const title = (formData.get("title") as string).trim().toLowerCase();
-  const content = (formData.get("content") as string).trim().toLowerCase();
-  const sourceUrl = (formData.get("source-url") as string).trim().toLowerCase();
+  const headline = (formData.get("headline") as string).trim().toLowerCase();
+  const description = (formData.get("description") as string)
+    .trim()
+    .toLowerCase();
+  const source = (formData.get("source") as string).trim().toLowerCase();
+  const sourceLink = (formData.get("source-link") as string)
+    .trim()
+    .toLowerCase();
   const image = formData.get("image") as File;
 
   try {
-    if (!country || !title || !content || !sourceUrl) {
+    if (!country || !headline || !description || !sourceLink || !source) {
       return { error: "empty input detected", success: "" };
     }
 
@@ -36,14 +41,19 @@ export const CreateBlog = async (prevData: any, formData: FormData) => {
 
     const { error: insertError } = await supabase.from("blogs").insert({
       country: country,
-      title: title,
-      content: content,
-      source_url: sourceUrl,
+      headline: headline,
+      description: description,
+      source: source,
+      source_link: sourceLink,
       image: fileUrl.publicUrl,
     });
 
     if (insertError) {
-      return { error: "failed to create blog. try again", success: "" };
+      return {
+        error:
+          "failed to create blog. check your internet connetion and try again",
+        success: "",
+      };
     }
 
     return { success: "blog created success", error: "" };

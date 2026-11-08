@@ -13,11 +13,12 @@
   align-items: center;
   gap: 1rem;
   border-radius: 50px;
-  border: 2px solid #00539c;
+  color: var(--bg-txt);
+  border: var(--border);
 }
 
 .dashboard > h2 {
-  box-shadow: 0px 0px 3px black;
+  box-shadow: var(--shadow);
   width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: 40px;

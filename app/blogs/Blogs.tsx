@@ -9,7 +9,10 @@ export type blogType = {
   id: number;
   created_at: string;
   country: string;
-  title: string;
+  headline: string;
+  description: string;
+  source: string;
+  source_link: string;
   image: string;
 };
 

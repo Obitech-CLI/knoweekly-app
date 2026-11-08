@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Blogs } from "./Blogs";
 import "./modify.css";
+import LoadingSkeleton from "@/app/blogs/Skeleton";
 
 export default function Page({
   searchParams,
@@ -15,7 +16,7 @@ export default function Page({
   return (
     <main>
       <h1>manage blogs</h1>
-      <Suspense fallback={<p>loading blogs...</p>}>
+      <Suspense fallback={<LoadingSkeleton />}>
         <Blogs searchParams={searchParams} />
       </Suspense>
     </main>

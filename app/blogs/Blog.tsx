@@ -4,14 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { formatDistanceToNow } from "date-fns";
-
-type blogType = {
-  id: number;
-  created_at: string;
-  country: string;
-  title: string;
-  image: string;
-};
+import { blogType } from "./Blogs";
+import { LinkIcon } from "lucide-react";
 
 type Props = {
   blog: blogType;
@@ -26,19 +20,26 @@ export function Blog({ blog }: Props) {
   };
   return (
     <article key={blog.id}>
+      {/*<span>
+            {formatDistanceToNowStrict(new Date(res.blog.created_at), {
+              addSuffix: true,
+            })}
+          </span>*/}
       <span>
         {formatDistanceToNow(new Date(blog.created_at), {
           addSuffix: true,
         })}
       </span>
-      <h2>{blog.title}</h2>
+      <h2>{blog.headline}</h2>
       <Image alt="" src={blog.image} height={200} width={300} />
-      <button
-        type="button"
-        onClick={() => openArticle(blog.country, blog.title)}
-      >
-        read article
-      </button>
+      <h3>{blog.description}</h3>
+      <p>
+        <strong>source: </strong>
+        {blog.source}
+      </p>
+      <Link href={blog.source_link}>
+        read full story <LinkIcon />
+      </Link>
     </article>
   );
 }

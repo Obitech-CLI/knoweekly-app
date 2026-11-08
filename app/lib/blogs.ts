@@ -1,6 +1,5 @@
 "use server";
 
-import { redirect } from "next/navigation";
 import { supabase } from "./supabase/supabase";
 
 export const getBlogs = async (
@@ -13,8 +12,8 @@ export const getBlogs = async (
   const date = selectedDate || today;
 
   const p = Number(page) || 1;
-  const from = Number(p - 1) * 3;
-  const to = from + 3 - 1;
+  const from = Number(p - 1) * 10;
+  const to = from + 10 - 1;
 
   try {
     if (!country) {
@@ -36,7 +35,10 @@ export const getBlogs = async (
     const { data, error } = await query;
 
     if (error) {
-      return { error: "failed to fetch blogs. try again" };
+      return {
+        error:
+          "failed to fetch blogs. check your internet connection and try again",
+      };
     }
 
     if (data.length === 0) {

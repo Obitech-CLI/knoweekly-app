@@ -57,20 +57,24 @@ export function AddForm() {
         )}
       </label>
       <label>
-        title
-        <input type="text" name="title" placeholder="enter title..." />
+        headline
+        <input type="text" name="headline" placeholder="enter headline..." />
       </label>
       <label>
         image
         <input type="file" name="image" accept="image/*" />
       </label>
       <label>
-        content
-        <textarea name="content" placeholder="enter content..." />
+        description
+        <textarea name="description" placeholder="enter description..." />
       </label>
       <label>
-        url
-        <input name="source-url" placeholder="enter source url..." />
+        source
+        <input name="source" placeholder="enter source..." />
+      </label>
+      <label>
+        source link
+        <input name="source-link" placeholder="enter source link..." />
       </label>
       <button type="submit" disabled={pending}>
         {pending ? "creating..." : "create"}
