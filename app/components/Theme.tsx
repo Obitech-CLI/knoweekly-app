@@ -9,6 +9,7 @@ function AppTheme() {
   return (
     <>
       <button
+        type="button"
         onClick={() => {
           if (theme === "dark") {
             setTheme("light");
