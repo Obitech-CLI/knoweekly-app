@@ -38,7 +38,7 @@ export function AddForm() {
         </button>
         {showCountries && (
           <div>
-            <h3>select countries</h3>
+            <h2>select countries</h2>
             {Countries.length ? (
               <ul>
                 {Countries.map((country) => (

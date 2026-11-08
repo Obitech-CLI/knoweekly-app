@@ -13,9 +13,11 @@ function AppTheme() {
         onClick={() => {
           if (theme === "dark") {
             setTheme("light");
+            return;
           }
           if (theme === "light") {
             setTheme("dark");
+            return;
           }
         }}
       >
