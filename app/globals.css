@@ -41,6 +41,14 @@ span {
   font-family: var(--font-jakarta);
 }
 
+button:active {
+  opacity: 0.2;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+}
+
 button {
   border: none;
   height: 50px;
