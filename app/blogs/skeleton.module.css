@@ -1,3 +1,27 @@
+.skeleton > div {
+  background: linear-gradient(90deg, #d1d1d1 25%, #e2e2e2 50%, #d1d1d1 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 6px;
+}
+
+.skeleton section > div {
+  background: linear-gradient(90deg, #d1d1d1 25%, #e2e2e2 50%, #d1d1d1 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 .skeleton {
   display: flex;
   flex-direction: column;
@@ -5,14 +29,10 @@
   gap: 1.5rem;
 }
 
-.skeleton > div {
-  background-color: grey;
-  border-radius: 10px;
-}
-
 .skeleton > .country {
   width: 200px;
   height: 50px;
+  margin: 0 1rem;
 }
 
 .skeleton > .countries {
@@ -23,17 +43,18 @@
   scrollbar-width: none;
   background-color: transparent;
   width: 100%;
+  margin: 0 1rem;
 }
 
 .skeleton > .countries > div {
   min-width: 200px;
   height: 55px;
-  background-color: grey;
-  border-radius: 10px;
+  border-radius: 3px 20px 20px 3px;
 }
 
 .skeleton > .search {
   height: 200px;
-  width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin: 0 1rem;
+  width: 97%;
 }

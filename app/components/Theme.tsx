@@ -11,14 +11,7 @@ function AppTheme() {
       <button
         type="button"
         onClick={() => {
-          if (theme === "dark") {
-            setTheme("light");
-            return;
-          }
-          if (theme === "light") {
-            setTheme("dark");
-            return;
-          }
+          setTheme(theme === "light" ? "dark" : "light");
         }}
       >
         {theme === "dark" ? <Moon /> : <Sun />}

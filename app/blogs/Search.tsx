@@ -76,7 +76,7 @@ export function Search() {
         });
 
   return (
-    <fieldset>
+    <fieldset style={{ margin: "0 0.5rem" }}>
       <h2>{formattedDate}</h2>
 
       <label>

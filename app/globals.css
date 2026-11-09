@@ -10,13 +10,15 @@
   --bg-txt: black;
   --shadow: 0px 0px 3px black;
   --border: 1.5px solid black;
+  --header: white;
 }
 
 [data-theme="dark"] {
-  --bg: black;
+  --bg: rgba(0, 0, 0, 0.5);
   --bg-txt: white;
   --shadow: 0px 0px 3px white;
   --border: 1.5px solid white;
+  --header: black;
 }
 
 body {
@@ -34,6 +36,10 @@ h1,
 h2 {
   text-transform: capitalize;
   font-family: var(--font-poppins);
+}
+
+main.blogs {
+  padding: 1rem 0;
 }
 
 h3,

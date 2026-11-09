@@ -14,7 +14,7 @@ export default function Page({
   }>;
 }) {
   return (
-    <main>
+    <main className="blogs">
       <Suspense fallback={<LoadingSkeleton />}>
         <Blogs searchParams={searchParams} />
       </Suspense>

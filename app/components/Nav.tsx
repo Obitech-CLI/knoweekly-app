@@ -25,7 +25,7 @@ export default function SelectCountries({ pcountry }: { pcountry: string }) {
     }
   };
   return (
-    <div className="countries">
+    <div className="countries" style={{ margin: "0 0.5rem" }}>
       {Countries.length ? (
         <>
           {Countries.map((country) => (

@@ -4,6 +4,13 @@
   gap: 1rem;
 }
 
+.blog {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 4rem;
+}
+
 .blogs > .blog {
   display: flex;
   flex-direction: column;
@@ -30,6 +37,10 @@
   padding: 0.5rem;
 }
 
+.blogs > h1 {
+  margin: 0 1rem;
+}
+
 .blog > article > p {
   display: flex;
   align-items: center;
@@ -51,8 +62,7 @@
   border-radius: 10px;
   text-transform: capitalize;
   gap: 0.5rem;
-  background-color: #00539c;
-  color: white;
+  color: var(--bg-txt);
 }
 
 .blog > article > span {
