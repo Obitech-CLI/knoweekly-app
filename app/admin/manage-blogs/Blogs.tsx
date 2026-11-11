@@ -8,13 +8,13 @@ import { RetryButton } from "@/app/components/Retry";
 
 export type blogType = {
   id: number;
-  country: string;
   created_at: string;
-  title: string;
+  country: string;
+  headline: string;
+  description: string;
+  source: string;
+  source_link: string;
   image: string;
-  content: string;
-  source_url: string;
-  author: string;
 };
 
 type Type = {
@@ -44,11 +44,11 @@ export async function Blogs({
       {res.blogs && (
         <>
           {res.blogs.length > 0 && (
-            <>
+            <div className="blog">
               {res.blogs.map((blog) => (
                 <ManageBlog key={blog.id} blog={blog} />
               ))}
-            </>
+            </div>
           )}
         </>
       )}

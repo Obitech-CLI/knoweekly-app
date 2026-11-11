@@ -25,7 +25,11 @@ export const LoginAdmin = async (prevData: any, formData: FormData) => {
       .single();
 
     if (!admin || adminError) {
-      return { error: "invalid credentials", success: "" };
+      return {
+        error:
+          "something went wrong. check your internet connection and try again",
+        success: "",
+      };
     }
 
     const matchPassword = await bcrypt.compare(password, admin.password);

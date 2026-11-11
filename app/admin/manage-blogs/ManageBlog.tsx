@@ -7,17 +7,8 @@ import Image from "next/image";
 import { Delete, Edit2, Link2, X } from "lucide-react";
 import { useErrorModal, useSuccessModal } from "@/app/contexts/feedbackContext";
 import { useRouter } from "next/navigation";
-
-type blogType = {
-  id: number;
-  country: string;
-  created_at: string;
-  title: string;
-  image: string;
-  content: string;
-  source_url: string;
-  author: string;
-};
+import { blogType } from "./Blogs";
+import Link from "next/link";
 
 type Props = {
   blog: blogType;
@@ -51,8 +42,16 @@ export function ManageBlog({ blog }: Props) {
   return (
     <>
       <article>
-        <h2>{blog.title}</h2>
+        <h2>{blog.headline}</h2>
         <Image alt="" src={blog.image} height={200} width={300} />
+        <h3>{blog.description}</h3>
+        <p>
+          <strong>source: </strong>
+          {blog.source}
+        </p>
+        <Link href={blog.source_link}>
+          read full story <Link2 />
+        </Link>
         <div>
           <button type="button" onClick={() => setEditing(true)}>
             <Edit2 color="blue" />
@@ -63,7 +62,7 @@ export function ManageBlog({ blog }: Props) {
         </div>
       </article>
       {editing && (
-        <form action={action}>
+        <form action={action} className="update-form">
           <button type="button" onClick={() => setEditing(false)}>
             <X />
           </button>
@@ -74,9 +73,9 @@ export function ManageBlog({ blog }: Props) {
             title
             <input
               type="input"
-              name="title"
-              defaultValue={blog.title}
-              placeholder="update blog title..."
+              name="headline"
+              defaultValue={blog.headline}
+              placeholder="update headline..."
             />
           </label>
           <label>
@@ -84,20 +83,29 @@ export function ManageBlog({ blog }: Props) {
             <input type="file" name="image" accept="image/*" />
           </label>
           <label>
-            content
+            description
             <textarea
-              name="content"
-              defaultValue={blog.content}
-              placeholder="update blog content..."
+              name="description"
+              defaultValue={blog.description}
+              placeholder="update description..."
             />
           </label>
           <label>
-            source url
+            source
             <input
               type="input"
-              name="source-url"
-              defaultValue={blog.source_url}
-              placeholder="update blog source link..."
+              name="source"
+              defaultValue={blog.source}
+              placeholder="update source..."
+            />
+          </label>
+          <label>
+            source link
+            <input
+              type="input"
+              name="source-link"
+              defaultValue={blog.source_link}
+              placeholder="update source link..."
             />
           </label>
           <button type="submit" disabled={pending}>

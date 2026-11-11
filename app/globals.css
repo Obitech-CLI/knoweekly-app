@@ -27,9 +27,11 @@ body {
 }
 
 a {
-  color: black;
+  color: var(--bg-txt);
   text-decoration: none;
-  border: 2px solid #00539c;
+  border: 1.5px solid #00539c;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
 }
 
 h1,
@@ -53,6 +55,16 @@ button:active {
 
 button[type="submit"]:disabled {
   opacity: 0.5;
+}
+
+.loading {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-transform: capitalize;
 }
 
 button {
@@ -88,16 +100,32 @@ button {
   border-radius: 20px;
 }
 
+form.update-form {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(20px);
+  padding: 5rem 1rem;
+  overflow: auto;
+}
+
+form.update-form > label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
 .error {
   text-transform: capitalize;
   text-align: center;
-  padding: 6rem 0;
+  padding: 6rem 2rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   box-shadow: var(--shadow);
+  margin: 1rem;
 }
 
 .countries > button.active {
@@ -150,10 +178,6 @@ fieldset > label button {
 fieldset > label {
   display: flex;
   align-items: center;
-}
-
-main > h1 {
-  margin-left: 1rem;
 }
 
 form.auth {
@@ -232,7 +256,20 @@ form.auth > label {
 form.delete {
   position: fixed;
   inset: 0;
-  padding: 1rem;
+  padding: 7rem 2rem;
+  backdrop-filter: blur(20px);
+}
+
+form.delete button[type="submit"] {
+  background-color: red;
+}
+
+form.delete > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+  width: 100%;
 }
 
 label.select > button {

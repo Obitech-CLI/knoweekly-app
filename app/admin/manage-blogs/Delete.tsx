@@ -5,6 +5,7 @@ import { DeleteBlog } from "./action";
 import { SetStateAction, useActionState, useEffect } from "react";
 import { useErrorModal, useSuccessModal } from "@/app/contexts/feedbackContext";
 import { useRouter } from "next/navigation";
+import { ClipLoader } from "react-spinners";
 
 type Props = {
   id: number;
@@ -56,8 +57,9 @@ export function DeleteButton({ id, setDeleting, editing }: Props) {
           <button type="submit">proceed</button>
         </>
       ) : (
-        <div>
+        <div className="loading">
           <h3>deleting blog...</h3>
+          <ClipLoader color="var(--bg-txt)" size={50} />
           <p>hold on a bit</p>
         </div>
       )}

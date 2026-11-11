@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Blogs } from "./Blogs";
 import "./modify.css";
-import LoadingSkeleton from "@/app/blogs/Skeleton";
+import { ClipLoader } from "react-spinners";
 
 export default function Page({
   searchParams,
@@ -16,7 +16,14 @@ export default function Page({
   return (
     <main>
       <h1>manage blogs</h1>
-      <Suspense fallback={<LoadingSkeleton />}>
+      <Suspense
+        fallback={
+          <div className="loading">
+            <p>loading news...</p>
+            <ClipLoader size={50} color="var(--bg-txt)" />
+          </div>
+        }
+      >
         <Blogs searchParams={searchParams} />
       </Suspense>
     </main>

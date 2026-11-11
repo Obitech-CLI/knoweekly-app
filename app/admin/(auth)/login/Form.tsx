@@ -5,6 +5,7 @@ import { LoginAdmin } from "./action";
 import { Lock, User2 } from "lucide-react";
 import { useErrorModal, useSuccessModal } from "@/app/contexts/feedbackContext";
 import { useRouter } from "next/navigation";
+import { ClipLoader } from "react-spinners";
 
 const initialState = { error: "", success: "" };
 
@@ -42,6 +43,7 @@ export function LoginForm() {
       </label>
       <button type="submit" disabled={pending}>
         {pending ? "logging..." : "login"}
+        {pending && <ClipLoader size={25} />}
       </button>
     </form>
   );

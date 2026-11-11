@@ -10,8 +10,12 @@ export const DeleteBlog = async (prevData: any, formData: FormData) => {
       return { error: "invalid request", success: "" };
     }
 
+    if (!confirm) {
+      return { error: "enter confirm phrase", success: "" };
+    }
+
     if (confirm.toLowerCase().trim() !== "i want to delete") {
-      return { err: "invalid confirm message", msg: "" };
+      return { error: "invalid confirm message", success: "" };
     }
     const { error } = await supabase.from("blogs").delete().eq("id", id);
 
