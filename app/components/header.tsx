@@ -25,6 +25,19 @@ export function Header() {
           </button>
         </>
       )}
+      {pathname === "/contact-us" ||
+      pathname === "/about-us" ||
+      pathname === "/disclaimer" ||
+      pathname === "/editorial-policy" ||
+      pathname === "/copyright-policy" ||
+      pathname === "/privacy-policy" ||
+      pathname === "/terms-service" ? (
+        <>
+          <button type="button" onClick={() => router.back()}>
+            <ChevronLeft />
+          </button>
+        </>
+      ) : null}
       {pathname === "/admin/create-blogs" && (
         <>
           <button type="button" onClick={() => router.back()}>

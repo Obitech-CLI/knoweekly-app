@@ -36,9 +36,6 @@ export async function Blogs({
 
   return (
     <div className="blogs">
-      <h1>{country}</h1>
-      <SelectCountries pcountry={country ? country : ""} />
-      <Search />
       {res.blogs && (
         <>
           {res.blogs.length > 0 && (

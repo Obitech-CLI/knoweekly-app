@@ -19,9 +19,9 @@ export default function SelectCountries({ pcountry }: { pcountry: string }) {
       params.set("page", "1");
     }
     if (pathname === "/") {
-      router.push(`/blogs?${params}`);
+      router.push(`/news-discoveries?${params}`);
     } else {
-      router.replace(`/blogs?${params}`);
+      router.replace(`/news-discoveries?${params}`);
     }
   };
   return (

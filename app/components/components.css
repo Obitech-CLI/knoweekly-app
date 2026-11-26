@@ -8,7 +8,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: var(--shadow);
 }
 
 footer {
@@ -17,30 +16,26 @@ footer {
   justify-content: center;
   padding: 1rem;
   background-color: var(--header);
-  position: fixed;
-  width: 100%;
-  bottom: 0;
   color: var(--bg-txt);
-  z-index: 5;
-  box-shadow: var(--shadow);
 }
 
 .footer > nav a {
   white-space: nowrap;
-  color: var(--bg-txt);
-  padding: 0.5rem 1rem;
-  border-radius: 40px;
   text-transform: capitalize;
+  padding: 0;
+  border: none;
+  text-decoration: 1.5px underline #00539c;
 }
 
 .footer > nav {
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 0;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 footer > p {
@@ -48,7 +43,9 @@ footer > p {
 }
 
 header > button {
-  height: 35px;
+  height: 42px;
+  padding: 0 0.7rem;
+  border-radius: 17px;
 }
 
 header > span {

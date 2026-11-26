@@ -27,11 +27,7 @@ body {
 }
 
 a {
-  color: var(--bg-txt);
-  text-decoration: none;
-  border: 1.5px solid #00539c;
-  padding: 0.5rem 1rem;
-  border-radius: 40px;
+  color: #00539c;
 }
 
 h1,
