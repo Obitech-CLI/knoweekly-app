@@ -106,6 +106,7 @@ form.update-form {
   backdrop-filter: blur(20px);
   padding: 5rem 1rem;
   overflow: auto;
+  z-index: 2;
 }
 
 form.update-form > label {
@@ -258,6 +259,7 @@ form.delete {
   inset: 0;
   padding: 7rem 2rem;
   backdrop-filter: blur(20px);
+  z-index: 2;
 }
 
 form.delete button[type="submit"] {

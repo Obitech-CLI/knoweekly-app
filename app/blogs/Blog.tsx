@@ -20,16 +20,33 @@ export function Blog({ blog }: Props) {
   };
   return (
     <article key={blog.id}>
-      {/*<span>
-            {formatDistanceToNowStrict(new Date(res.blog.created_at), {
-              addSuffix: true,
-            })}
-          </span>*/}
-      <span>
-        {formatDistanceToNow(new Date(blog.created_at), {
-          addSuffix: true,
-        })}
-      </span>
+      {blog.country === "united states" && (
+        <span>
+          {new Date(blog.created_at).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </span>
+      )}
+      {blog.country === "canada" && (
+        <span>
+          {new Date(blog.created_at).toLocaleDateString("en-CA", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </span>
+      )}
+      {blog.country === "united kingdom" && (
+        <span>
+          {new Date(blog.created_at).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </span>
+      )}
       <h2>{blog.headline}</h2>
       <Image alt="" src={blog.image} height={200} width={300} />
       <h3>{blog.description}</h3>

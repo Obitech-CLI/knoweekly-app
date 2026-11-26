@@ -7,7 +7,8 @@
 .blogs > .blog {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 6rem;
+  margin-bottom: 5rem;
 }
 
 .blog > article {
@@ -16,6 +17,7 @@
   gap: 0.5rem;
   box-shadow: var(--shadow);
   border-radius: 5px;
+  position: relative;
 }
 
 .blog > article > img {
@@ -29,4 +31,34 @@
 
 .blog > article > h3 {
   padding: 0.5rem;
+}
+
+.blog > article > p {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
+  width: fit-content;
+  border-radius: 10px;
+  margin: 0 0.5rem;
+}
+
+.blog > article > a {
+  margin: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+
+.blog > article > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  position: absolute;
+  bottom: -5rem;
 }

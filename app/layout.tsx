@@ -15,6 +15,7 @@ import {
   Fraunces,
 } from "next/font/google";
 import { AppThemeProvider } from "./contexts/themeContext";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SuccessModalProvider>
             <ErrorModalProvider>
               <Header />
+              <GoogleAnalytics />
               {children}
               <SuccessModal />
               <ErrorModal />

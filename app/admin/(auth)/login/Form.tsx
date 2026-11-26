@@ -43,7 +43,7 @@ export function LoginForm() {
       </label>
       <button type="submit" disabled={pending}>
         {pending ? "logging..." : "login"}
-        {pending && <ClipLoader size={25} />}
+        {pending && <ClipLoader size={25} color="white" />}
       </button>
     </form>
   );

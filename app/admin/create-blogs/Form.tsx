@@ -5,6 +5,7 @@ import { CreateBlog } from "./action";
 import { Countries } from "@/app/components/Countries";
 import { ChevronDown } from "lucide-react";
 import { useErrorModal, useSuccessModal } from "@/app/contexts/feedbackContext";
+import { ClipLoader } from "react-spinners";
 
 const initialState = {
   error: "",
@@ -78,6 +79,7 @@ export function AddForm() {
       </label>
       <button type="submit" disabled={pending}>
         {pending ? "creating..." : "create"}
+        {pending && <ClipLoader size={25} color="white" />}
       </button>
     </form>
   );

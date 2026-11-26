@@ -39,6 +39,15 @@ export function ManageBlog({ blog }: Props) {
       setErrorMsg(state.error);
     }
   }, [state]);
+
+  useEffect(() => {
+    document.body.style.overflow = editing || deleting ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [editing, deleting]);
+
   return (
     <>
       <article>
