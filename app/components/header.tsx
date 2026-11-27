@@ -20,8 +20,8 @@ export function Header() {
 
   return (
     <header>
-      <span>
-        {pathname === "/news-discoveries" && (
+      <div>
+        {/*{pathname === "/news-discoveries" && (
           <>
             <button type="button" onClick={() => router.back()}>
               <ChevronLeft />
@@ -54,10 +54,10 @@ export function Header() {
               <ChevronLeft />
             </button>
           </>
-        )}
+        )} */}
 
-        <Image alt="" src={Logo} height={100} width={190} onClick={goHome} />
-      </span>
+        <Image alt="" src={Logo} height={100} width={180} onClick={goHome} />
+      </div>
       <AppTheme />
     </header>
   );

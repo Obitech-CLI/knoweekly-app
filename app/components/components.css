@@ -45,12 +45,17 @@ header > button {
   border-radius: 17px;
 }
 
-header > span {
+header > div > button {
+  padding: 0.3rem 0.8rem;
+}
+
+header > div {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-header > span > img {
+header > div > img {
   object-fit: contain;
   cursor: pointer;
   height: fit-content;

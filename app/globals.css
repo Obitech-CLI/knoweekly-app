@@ -119,14 +119,14 @@ form.update-form > label {
 .error {
   text-transform: capitalize;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   box-shadow: var(--shadow);
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .countries > button.active {
