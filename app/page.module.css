@@ -5,14 +5,12 @@ main.home {
 .Hero > img {
   width: 100%;
   object-fit: cover;
-  position: relative;
+  object-position: right center;
 }
 
 .Hero > h1 {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  color: black;
+  margin: 0 1rem 1rem;
+  border-radius: 5px;
 }
 
 .Hero {
@@ -20,10 +18,10 @@ main.home {
 }
 
 .Hero > button {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
   padding: 1rem 2rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
 }
 
 .home > .countries > div {

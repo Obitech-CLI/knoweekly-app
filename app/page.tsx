@@ -13,11 +13,11 @@ export default function Home() {
         </Suspense>
       </div>
       <div className={styles.Hero}>
-        <Image alt="" src={hero} height={250} width={900} loading="eager" />
         <h1>
-          The World,<br></br>One Week<br></br>at a Time
+          Discover The World,<br></br>One Week at a Time
         </h1>
         <button type="button">Explore This Week</button>
+        <Image alt="" src={hero} height={300} width={900} loading="eager" />
       </div>
     </main>
   );

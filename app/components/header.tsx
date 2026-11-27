@@ -3,6 +3,8 @@
 import { usePathname, useRouter } from "next/navigation";
 import { AppTheme } from "./Theme";
 import { ChevronLeft } from "lucide-react";
+import Image from "next/image";
+import Logo from "@/public/Logo.png";
 
 export function Header() {
   const router = useRouter();
@@ -18,41 +20,44 @@ export function Header() {
 
   return (
     <header>
-      {pathname === "/blogs" && (
-        <>
-          <button type="button" onClick={() => router.back()}>
-            <ChevronLeft />
-          </button>
-        </>
-      )}
-      {pathname === "/contact-us" ||
-      pathname === "/about-us" ||
-      pathname === "/disclaimer" ||
-      pathname === "/editorial-policy" ||
-      pathname === "/copyright-policy" ||
-      pathname === "/privacy-policy" ||
-      pathname === "/terms-service" ? (
-        <>
-          <button type="button" onClick={() => router.back()}>
-            <ChevronLeft />
-          </button>
-        </>
-      ) : null}
-      {pathname === "/admin/create-blogs" && (
-        <>
-          <button type="button" onClick={() => router.back()}>
-            <ChevronLeft />
-          </button>
-        </>
-      )}
-      {pathname === "/admin/manage-blogs" && (
-        <>
-          <button type="button" onClick={() => router.back()}>
-            <ChevronLeft />
-          </button>
-        </>
-      )}
-      <span onClick={goHome}>knoweekly</span>
+      <span>
+        {pathname === "/news-discoveries" && (
+          <>
+            <button type="button" onClick={() => router.back()}>
+              <ChevronLeft />
+            </button>
+          </>
+        )}
+        {pathname === "/contact-us" ||
+        pathname === "/about-us" ||
+        pathname === "/disclaimer" ||
+        pathname === "/editorial-policy" ||
+        pathname === "/copyright-policy" ||
+        pathname === "/privacy-policy" ||
+        pathname === "/terms-service" ? (
+          <>
+            <button type="button" onClick={() => router.back()}>
+              <ChevronLeft />
+            </button>
+          </>
+        ) : null}
+        {pathname === "/admin/create-blogs" && (
+          <>
+            <button type="button" onClick={() => router.back()}>
+              <ChevronLeft />
+            </button>
+          </>
+        )}
+        {pathname === "/admin/manage-blogs" && (
+          <>
+            <button type="button" onClick={() => router.back()}>
+              <ChevronLeft />
+            </button>
+          </>
+        )}
+
+        <Image alt="" src={Logo} height={100} width={190} onClick={goHome} />
+      </span>
       <AppTheme />
     </header>
   );

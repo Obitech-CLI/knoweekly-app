@@ -22,16 +22,13 @@ footer {
 .footer > nav a {
   white-space: nowrap;
   text-transform: capitalize;
-  padding: 0;
-  border: none;
-  text-decoration: 1.5px underline #00539c;
 }
 
 .footer > nav {
   margin: 2rem 0 0;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
@@ -49,11 +46,14 @@ header > button {
 }
 
 header > span {
-  font-size: 1.3rem;
-  color: #00539c;
-  text-transform: capitalize;
-  font-family: var(--font-fraunces), serif;
+  display: flex;
+  align-items: center;
+}
+
+header > span > img {
+  object-fit: contain;
   cursor: pointer;
+  height: fit-content;
 }
 
 .feedback-modal {
