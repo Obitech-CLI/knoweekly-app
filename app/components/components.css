@@ -10,13 +10,28 @@ header {
   justify-content: space-between;
 }
 
-footer {
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.footer .sponsor span {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.sponsor span em {
+  font-size: 2rem;
+}
+
+footer {
   padding: 1rem;
   background-color: var(--header);
   color: var(--bg-txt);
+  grid-column: span 2;
+  text-align: center;
 }
 
 .footer > nav a {
@@ -33,6 +48,22 @@ footer {
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
+}
+
+.footer > .sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: var(--border);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.footer > .sponsor > img {
+  border-radius: 50%;
 }
 
 footer > p {
