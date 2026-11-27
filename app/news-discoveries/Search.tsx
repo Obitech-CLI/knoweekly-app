@@ -49,7 +49,7 @@ export function Search() {
     params.set("selectedDate", newDate);
     params.set("page", "1");
 
-    router.replace(`/blogs?${params.toString()}`);
+    router.replace(`/news-discoveries?${params.toString()}`);
   };
 
   const handleSearch = () => {
@@ -63,7 +63,7 @@ export function Search() {
 
     params.set("page", "1");
 
-    router.push(`/blogs?${params.toString()}`);
+    router.push(`/news-discoveries?${params.toString()}`);
   };
 
   const formattedDate =
@@ -107,7 +107,7 @@ export function Search() {
             params.set("selectedDate", newDate);
             params.set("page", "1");
 
-            router.push(`/blogs?${params.toString()}`);
+            router.push(`/news-discoveries?${params.toString()}`);
           }}
         />
 

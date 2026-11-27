@@ -4,6 +4,7 @@ import "./blogs.css";
 import { ClipLoader } from "react-spinners";
 import SelectCountries from "../components/Nav";
 import { Search } from "./Search";
+import LoadingSkeleton from "./Skeleton";
 
 export default async function Page({
   searchParams,
@@ -23,14 +24,7 @@ export default async function Page({
       <SelectCountries pcountry={country ? country : ""} />
       <Search />
 
-      <Suspense
-        fallback={
-          <div className="loading">
-            <p>loading news...</p>
-            <ClipLoader size={50} color="var(--bg-txt)" />
-          </div>
-        }
-      >
+      <Suspense fallback={<LoadingSkeleton />}>
         <Blogs searchParams={searchParams} />
       </Suspense>
     </main>

@@ -1,11 +1,56 @@
-.skeleton > div {
-  background: linear-gradient(90deg, #d1d1d1 25%, #e2e2e2 50%, #d1d1d1 75%);
+.skeleton {
+  background-color: var(--sk-bg);
+  /*background: linear-gradient(90deg, #d1d1d1 25%, #e2e2e2 50%, #d1d1d1 75%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
-  border-radius: 6px;
+  border-radius: 6px;*/
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem;
 }
 
-.skeleton section > div {
+.skeleton > .date {
+  height: 40px;
+  width: 150px;
+}
+
+.skeleton > .headline {
+  height: 55px;
+  width: 100%;
+}
+
+.skeleton > .source {
+  height: 35px;
+  width: 70%;
+}
+
+.skeleton > .url {
+  width: 100%;
+  height: 50px;
+}
+
+.skeleton > .p {
+  height: 250px;
+  width: 100%;
+}
+
+.skeleton > .img {
+  height: 200px;
+  width: 100%;
+}
+
+.skeletons {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 5rem;
+}
+
+.skeleton > div {
   background: linear-gradient(90deg, #d1d1d1 25%, #e2e2e2 50%, #d1d1d1 75%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
@@ -20,41 +65,4 @@
   100% {
     background-position: -200% 0;
   }
-}
-
-.skeleton {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-
-.skeleton > .country {
-  width: 200px;
-  height: 50px;
-  margin: 0 1rem;
-}
-
-.skeleton > .countries {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  overflow: auto;
-  scrollbar-width: none;
-  background-color: transparent;
-  width: 100%;
-  margin: 0 1rem;
-}
-
-.skeleton > .countries > div {
-  min-width: 200px;
-  height: 55px;
-  border-radius: 3px 20px 20px 3px;
-}
-
-.skeleton > .search {
-  height: 200px;
-  border-radius: 20px;
-  margin: 0 1rem;
-  width: 97%;
 }

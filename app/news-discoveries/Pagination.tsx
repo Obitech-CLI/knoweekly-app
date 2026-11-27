@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { blogType } from "./Blogs";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -19,7 +18,7 @@ export function Pagination() {
 
     setPage(newPage);
 
-    router.push(`/blogs?${params.toString()}`);
+    router.push(`/news-discoveries?${params.toString()}`);
   };
 
   return (
