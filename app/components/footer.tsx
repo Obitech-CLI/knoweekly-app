@@ -29,7 +29,7 @@ export function Footer() {
               <em>obitech</em>
             </span>
 
-            <Image alt="" src={ObitechLogo} width={100} height={100} />
+            <Image alt="" src={ObitechLogo} width={85} height={85} />
           </div>
         </>
       )}

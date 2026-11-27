@@ -11,19 +11,23 @@ header {
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .footer .sponsor span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-right: 2px solid var(--bg-txt);
+  padding: 0.5rem 1rem 0.5rem 0;
+  gap: 0.4rem;
 }
 
 .sponsor span em {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 footer {
@@ -52,13 +56,9 @@ footer {
 
 .footer > .sponsor {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  border: var(--border);
-  margin: 1rem;
-  padding: 1rem;
   border-radius: 10px;
 }
 

@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const countries = ["united states", "united kingdom", "canada", "australia"];
-
   return [
     {
       url: "https://knoweekly.world",
@@ -14,11 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.9,
     },
-    ...countries.map((country) => ({
-      url: `https://knoweekly.world/news-discoveries?country=${encodeURIComponent(country)}&page=1`,
-      changeFrequency: "daily" as const,
-      priority: 0.9,
-    })),
     {
       url: "https://knoweekly.world/about-us",
       changeFrequency: "monthly",
